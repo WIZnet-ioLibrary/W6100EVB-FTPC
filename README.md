@@ -22,87 +22,72 @@ best fits for low-end Non-OS devices connecting to Ethernet for the Internet of 
 </p>
 
 ## Software Environment
-* Device Setting Program : STM32CubeMX Ver 5.1.0
-* Compile Program : TrueStudio Ver 9.2.0
-* Flash Program : FLASHER-STM32 Ver2.8.0
-* Compile method <br>
-  - Git-Hub source file download <br>
-  - TrueStudio -> W6100EVB-FTPC in folder, run TrueStudio Project file <br>
-  <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55785003-a47dcb80-5aec-11e9-8955-a4c1ebf95918.png" />
-  </p>
-
-  - WorkSpace path select<br>
-  <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55773235-9f0f8980-5aca-11e9-825c-7f362cbfc7fd.png" />
-  </p>
-
-  - ① open main.c file and build ② build icon or Key CTRL + B  <br>
-  <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55773236-9f0f8980-5aca-11e9-95f4-5e68b0045935.png" />
-  </p>
-
-  - If you have ST-LINK, Run Debug - Click debug button or Key F8<br>
-  <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55773705-c404fc00-5acc-11e9-84dd-d0774a1d17db.png" />
-  </p>
-
-  - Serial Flash Download<br>
-    - Check Serial Port<br>
-    <p align="center">
-      <img width="60%" src="https://user-images.githubusercontent.com/48539052/55779775-544d3c00-5ae1-11e9-8a5c-625062b4a40d.png" />
-    </p>
-
-    - Check Hex file <br>
-    <p align="center">
-      <img width="60%" src="https://user-images.githubusercontent.com/48539052/55779776-544d3c00-5ae1-11e9-91a3-024eca4ad7d2.png" />
-    </p>
-
-    - Device Program upload, See site below.
-      - [How to uploading to firmware ](https://wizwiki.net/wiki/doku.php?id=products:w6100:w6100_evb:getting_started#how_to_uploading_to_firmware)
+In case of used to TureSTUDIO,it it the same as HTTP Server example.
+ - Link : [Software Environment of W6100EVB-HTTP_Server](https://github.com/WIZnet-ioLibrary/W6100EVB-HTTP_Server#Software-Environment)
 
 
 
 ## Run
 * Demo Environment & Program <br>
 
-  - Windows 10 <br>
-  - Internet Explorer <br>
+  - Windows 7 <br>
   - Hercules <br>
+  - [TCP Server Program - FileZila](https://filezilla-project.org/download.php?type=server) <br>
 
 
 * Demo Result <br>
+  - Excute FTP Server Program<br>
+  <p align="center">
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56015759-16485600-5d35-11e9-855f-8983e91a5765.PNG" />
+  </p>
+
+  - Add Users<br>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015760-16485600-5d35-11e9-8ea2-4887f5e5d606.PNG" />
+</p>
+
+  - Set shared folders<br>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015761-16485600-5d35-11e9-8ca6-f4ed96367d0d.PNG" />
+</p>
+
+  - configure server listen port<br>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015763-16485600-5d35-11e9-9913-b38869443825.PNG" />
+</p>
+
   - Power On and push Reset button to start Program<br>
-  - Program Run Serial display <br>
+  - Program Run Serial display<br>
   <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55784555-c75bb000-5aeb-11e9-9bbe-a662209c9285.png" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56018661-abe7e380-5d3d-11e9-88db-f0913d837aa7.PNG" />
   </p>
 
-  - Excute Internet Explorer and input device ip address<br>
-  - Internet Explorer contact FTP Server <br>
+  - Enter User ID
   <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55781267-ba878e00-5ae4-11e9-9a48-0c7977b72746.png" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019278-2d8c4100-5d3f-11e9-845a-251c65218c99.PNG" />
   </p>
 
-  - Internet Explorer FTP Server Device Network Information <br>
+
+  - Enter password
   <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55784554-c75bb000-5aeb-11e9-8fee-bc279b42e73f.png" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019279-2d8c4100-5d3f-11e9-978c-a5404eeb75b5.PNG" />
   </p>
 
-  - Internet Explorer FTP Server Device RGB LED control <br>
+  - Select menu
   <p align="center">
-    <img width="60%" src="https://user-images.githubusercontent.com/48539052/55775474-64125380-5ad4-11e9-9c38-0eed6cf6164f.png" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019280-2d8c4100-5d3f-11e9-9d5f-51b62dcd6a8b.PNG" />
   </p>
 
-  ## Code review
-  * main.c code flow <br>
+  - When 1 is pressed, you can see the list of files on the server.
   <p align="center">
-    <img width="50%" src="https://user-images.githubusercontent.com/48539052/55776879-19470a80-5ad9-11e9-8945-32cdbd5ba0a3.png" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019281-2e24d780-5d3f-11e9-8206-e027a8abf4e6.PNG" />
   </p>
+
+
 
    ## Test packet capture file
    <p align="center">
-     <img width="60%" src="https://user-images.githubusercontent.com/48539052/55852389-ba949600-5b97-11e9-8824-91287170a243.png" />
+     <img width="100%" src="https://user-images.githubusercontent.com/24927447/56022905-a8f1f080-5d47-11e9-9f5a-2e0dbab43902.PNG" />
    </p>
    
-    - [FTP_Server_Packet.zip](https://github.com/WIZnet-ioLibrary/W6100EVB-FTP_Server/files/3057274/FTP_Server_Packet.zip)
+    - [FTP_Client_Packet.zip](https://github.com/WIZnet-ioLibrary/W6100EVB-FTPC/files/3072310/FTPClient_packet.zip)
