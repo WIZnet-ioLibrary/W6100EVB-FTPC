@@ -1,5 +1,5 @@
 # Index
-- [FTP SClient Example for W6100-EVB](#FTP-Client-Example-for-W6100-EVB)
+- [FTP Client Example for W6100-EVB](#FTP-Client-Example-for-W6100-EVB)
 - [Hardware Environment](#Hardware-Environment)
 - [Software Environments](#Software-Environment)
 - [Run](#Run)
@@ -38,56 +38,52 @@ In case of used to TureSTUDIO,it it the same as HTTP Server example.
 * Demo Result <br>
   - Excute FTP Server Program<br>
   <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56015759-16485600-5d35-11e9-855f-8983e91a5765.PNG" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953004-839e1880-6b76-11e9-84ed-8c1e2701c95e.PNG" />
   </p>
 
-  - Add Users<br>
+  - Add Users(Set User ID & Password)<br>
 <p align="center">
-<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015760-16485600-5d35-11e9-8ea2-4887f5e5d606.PNG" />
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56953005-839e1880-6b76-11e9-8098-4712d0c1ff89.PNG" />
 </p>
 
   - Set shared folders<br>
 <p align="center">
-<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015761-16485600-5d35-11e9-8ca6-f4ed96367d0d.PNG" />
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56953007-839e1880-6b76-11e9-90b9-8faaf749b96f.PNG" />
 </p>
 
   - configure server listen port<br>
 <p align="center">
-<img width="100%" src="https://user-images.githubusercontent.com/24927447/56015763-16485600-5d35-11e9-9913-b38869443825.PNG" />
+<img width="100%" src="https://user-images.githubusercontent.com/24927447/56953008-8436af00-6b76-11e9-881a-aae9006ae6f6.PNG" />
 </p>
 
   - Power On and push Reset button to start Program<br>
   - Program Run Serial display<br>
-  <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56018661-abe7e380-5d3d-11e9-88db-f0913d837aa7.PNG" />
-  </p>
-
   - Enter User ID
   <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019278-2d8c4100-5d3f-11e9-845a-251c65218c99.PNG" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953009-8436af00-6b76-11e9-95bf-b1507e75000a.PNG" />
   </p>
 
 
   - Enter password
   <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019279-2d8c4100-5d3f-11e9-978c-a5404eeb75b5.PNG" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953010-8436af00-6b76-11e9-823e-9947ed2dd4f8.PNG" />
   </p>
 
   - Select menu
   <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019280-2d8c4100-5d3f-11e9-9d5f-51b62dcd6a8b.PNG" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953011-84cf4580-6b76-11e9-9dfa-08b9c72ae701.PNG" />
   </p>
 
   - When 1 is pressed, you can see the list of files on the server.
   <p align="center">
-    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56019281-2e24d780-5d3f-11e9-8206-e027a8abf4e6.PNG" />
+    <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953012-84cf4580-6b76-11e9-9220-f844d20ea73a.PNG" />
   </p>
 
 
 
    ## Test packet capture file
    <p align="center">
-     <img width="100%" src="https://user-images.githubusercontent.com/24927447/56022905-a8f1f080-5d47-11e9-9f5a-2e0dbab43902.PNG" />
+     <img width="100%" src="https://user-images.githubusercontent.com/24927447/56953416-84837a00-6b77-11e9-91a6-40c3d669c83c.PNG" />
    </p>
    
-    - [FTP_Client_Packet.zip](https://github.com/WIZnet-ioLibrary/W6100EVB-FTPC/files/3072310/FTPClient_packet.zip)
+    - [FTP_Client_Packet.zip](https://github.com/WIZnet-ioLibrary/W6100EVB-FTPC/files/3130668/FTPClientPacket.zip)
