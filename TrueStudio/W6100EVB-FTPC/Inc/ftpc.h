@@ -16,8 +16,6 @@ extern "C" {
 
 #define F_APP_FTPC
 
-/* If your target support a file system, you have to activate this feature and implement. */
-//#define F_FILESYSTEM
 
 /* Change to your Chipset Uart function, you have to activate this feature and implement.
  * Change!! -> Board_UARTGetCharBlocking()
@@ -75,10 +73,10 @@ struct ftpc {
     uint8_t     control;			/* FTP Control Socket */
 	uint8_t     data;				/* FTP Data Socket */
 	uint8_t     as_type;  			/* FTP IP version */
-	uint8_t     destip[16];
-	uint16_t    destport;
-	uint8_t     is_ascii;		/* Transfer Type 1 : ASCII, 0 : Binary*/
-	uint8_t     is_active;      /* Transfer Type 1 : ASCII, 0 : Binary*/
+	uint8_t     destip[16];         /* FTP Server IP Address*/
+	uint16_t    destport;           /* FTP Server Port */
+	uint8_t     is_ascii;		    /* FTP Transfer Type 1 : ASCII, 0 : Binary*/
+	uint8_t     is_active;          /* FTP Transfer mode 1 : Active, 0 : Passive*/
 	enum ftpc_datasock_state dsock_state;
 	char workingdir[_FTP_FILENAME_LEN_];
 	char filename[_FTP_FILENAME_LEN_];

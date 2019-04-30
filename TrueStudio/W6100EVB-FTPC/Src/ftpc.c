@@ -88,7 +88,8 @@ uint8_t ftpc_run(uint8_t * dbuf)
                 strcpy(ftpc.workingdir, "/");
                 connect_state_control_ftpc = 1;
             }
-            if((size = getSn_RX_RSR(ftpc.control)) > 0)// Don't need to check SOCKERR_BUSY because it doesn't not occur.
+            getsockopt(ftpc.control,SO_RECVBUF,&size);
+            if(size > 0)// Don't need to check SOCKERR_BUSY because it doesn't not occur.
             {
                 msgsize = peeksockmsg(ftpc.control, "\r\n" ,2);
                 msgsize+=2;
@@ -145,8 +146,8 @@ uint8_t ftpc_run(uint8_t * dbuf)
         default :
             break;
     }
-
-    switch(tmp=getSn_SR(ftpc.data)){
+    getsockopt(ftpc.data, SO_STATUS, &tmp);
+    switch(tmp){
         case SOCK_ESTABLISHED :
         if(!connect_state_data_ftpc)
         {
@@ -454,16 +455,17 @@ int ftpc_putget(uint8_t* dbuf)
 {
     uint16_t size;
     uint32_t remain_filesize;
-    uint32_t remain_datasize;
+    uint16_t remain_datasize;
     uint32_t  recv_byte;
     uint32_t blocklen;
+    uint8_t tmp;
     int ret;
 
     switch(Command.Second){
         case cmd_dir:
             printf("dir waiting...\r\n");
-
-            if((size = getSn_RX_RSR(ftpc.data)) > 0){ // Don't need to check SOCKERR_BUSY because it doesn't not occur.
+            getsockopt(ftpc.data,SO_RECVBUF,&size);
+            if(size > 0){ // Don't need to check SOCKERR_BUSY because it doesn't not occur.
                 printf("ok\r\n");
                 memset(dbuf, 0, _FTP_MAX_MSG_SIZE_);
                 if(size > _FTP_MAX_MSG_SIZE_) size = _FTP_MAX_MSG_SIZE_ - 1;
@@ -511,7 +513,8 @@ int ftpc_putget(uint8_t* dbuf)
 
 
             while(1){
-                if((remain_datasize = getSn_RX_RSR(ftpc.data)) > 0){
+                getsockopt(ftpc.data,SO_RECVBUF,&remain_datasize);
+                if(remain_datasize > 0){
                     while(1){
                         memset(dbuf, 0, _FTP_MAX_MSG_SIZE_);
                         if(remain_datasize > _FTP_MAX_MSG_SIZE_)
@@ -525,7 +528,8 @@ int ftpc_putget(uint8_t* dbuf)
                             break;
                     }
                 }else{
-                    if(getSn_SR(ftpc.data) != SOCK_ESTABLISHED)
+                    getsockopt(ftpc.data, SO_STATUS, &tmp);
+                    if(tmp != SOCK_ESTABLISHED)
                         break;
                 }
             }
